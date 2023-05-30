@@ -1,0 +1,109 @@
+/*
+Use transparency to get the colour variations necessary to match the design. Hint: look into using `hsla()`.
+- Font size (paragraphs): 18px
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+:root {
+    /* Primary */
+    --light-red: hsl(0, 100%, 67%);
+    --orange-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+
+    --light-slate-blue: hsl(252, 100%, 67%);    /* (background) */
+    --light-royal-blue: hsl(241, 81%, 54%);     /* (background) */
+
+    --violet-blue: hsla(256, 72%, 46%, 1);      /* (circle) */
+    --persian-blue: hsla(241, 72%, 46%, 0);     /* (circle) */
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+.cards {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 8%;
+    box-shadow: 4px 4px 10px var(--light-lavender);
+    border-radius: 20px;
+}
+.card-1{
+    background: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+    border-radius: 20px;
+}
+.circle{
+    background: var(--violet-blue);
+    width: 150px;
+    height: 150px;
+    padding: 45px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.badge-1, .badge-2, .badge-3, .badge-4{
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.badge-1::first-line {
+    color: var(--light-red);
+}
+.badge-1 {
+    background: rgba(255, 87, 87, 0.1);
+}
+
+.badge-2::first-line {
+    color: var(--orange-yellow)
+}
+.badge-2 {
+    background: rgb(255, 176, 31, 0.1);
+}
+
+.badge-3::first-line {
+    color: var(--green-teal)
+}
+.badge-3 {
+    background: rgba(0, 189, 145, 0.1);
+}
+
+.badge-4::first-line {
+    color: var(--cobalt-blue)
+}
+.badge-4 {
+    background: rgba(17, 37, 212, 0.1)
+}
+
+.continue {
+    background: var(--dark-gray-blue);
+    text-decoration: none;
+    width: 100%;
+    border-radius: 30px;
+    color: var(--white);
+    padding: 10px;
+    transition: 0.7s;
+}
+.continue:hover {
+    color: var(--white);
+    background: var(--cobalt-blue);
+}
+.attribution {
+    padding: 10px;
+    text-align: center;
+}
+@media screen and (max-width: 786px){
+    .cards {
+        width: 100%;
+        box-shadow: none;
+    }
+    body{
+        margin: 30px;
+    }
+}
